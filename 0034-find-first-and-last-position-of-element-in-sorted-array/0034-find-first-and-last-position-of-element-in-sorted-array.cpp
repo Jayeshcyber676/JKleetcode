@@ -9,7 +9,7 @@ public:
 
             if (nums[mid] == target) {
                 ans = mid;
-                right = mid - 1; // Search on the left
+                right = mid - 1;  
             }
             else if (nums[mid] < target) {
                 left = mid + 1;
