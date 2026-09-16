@@ -12,19 +12,17 @@ public:
 
              
             if (nums[low] <= nums[mid]) {
-                if (target >= nums[low] && target < nums[mid]) {
+                if (nums[low] <= target && target < nums[mid])
                     high = mid - 1;
-                } else {
+                else
                     low = mid + 1;
-                }
             }
-             
+            
             else {
-                if (target > nums[mid] && target <= nums[high]) {
+                if (nums[mid] < target && target <= nums[high])
                     low = mid + 1;
-                } else {
+                else
                     high = mid - 1;
-                }
             }
         }
 
